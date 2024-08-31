@@ -1,0 +1,16 @@
+import random
+print("BIENVENIDO A ESTE JUEGO")
+print("En este juego usted debe adivinar el numero de dos digitos que el programa ha elegido de forma aleatoria")
+numero_secreto=random.randint(10, 99)
+seguir_jugando = True
+while seguir_jugando == True:
+    numero_ingresado = int(input("ingrese un numero: "))
+    if numero_ingresado < numero_secreto:
+        print(f"El numero secreto es mayor que {numero_ingresado}")
+        seguir_jugando = True
+    elif numero_ingresado > numero_secreto:  
+        print(f"El numero secreto es menor que {numero_ingresado}")
+        seguir_jugando = True
+    else: 
+        print("¡ADIVINASTE!")
+        seguir_jugando = False
