@@ -1,0 +1,101 @@
+print("Bienvenido a Hamburgeseria Juanjito")
+hamburguesas=0
+bebidas=0
+papas=0
+helados=0 
+subtotal=0
+n1=1
+n2=1
+n3=1
+n4=1
+NumHamburguesas=int(input("cuantas hamburguesas quiere?"))
+while n1 <= NumHamburguesas:
+    tamañoH=input(f"De que tamaño desea su hamburguesa numero {n1} (pequeña, mediana o grande)")
+    if tamañoH=="pequeña":
+        subtotal=subtotal+15000
+        hamburguesas=hamburguesas+15000
+        n1=n1+1
+    elif tamañoH=="mediana":
+        subtotal=subtotal+17000
+        hamburguesas=hamburguesas+17000
+        n1=n1+1
+    elif tamañoH=="grande":
+        subtotal=subtotal+20000
+        hamburguesas=hamburguesas+20000
+        n1=n1+1
+    else:
+        print("Tamaño incorrecto")
+    
+NumBebidas=int(input("cuantas bebidas quiere?"))
+while n2<=NumBebidas:
+    tamañoB=input(f"De que tamaño desea su bebida numero {n2} (pequeña, mediana o grande)")
+    if tamañoB=="pequeña":
+        subtotal=subtotal+3000
+        bebidas=bebidas+3000
+        n2=n2+1
+    elif tamañoB=="mediana":
+        subtotal=subtotal+4000
+        bebidas=bebidas+4000
+        n2=n2+1
+    elif tamañoB=="grande":
+        subtotal=subtotal+5000
+        bebidas=bebidas+5000
+        n2=n2+1
+    else:
+        print("Tamaño incorrecto")    
+    
+NumPapas=int(input("cuantas papas quiere?"))
+while n3<=NumPapas:
+    tamañoP=input(f"De que tamaño desea su porcion de papas numero {n3} (pequeña, mediana o grande)")
+    if tamañoP=="pequeña":
+        subtotal=subtotal+4000
+        papas=papas+4000
+        n3=n3+1
+    elif tamañoP=="mediana":
+        subtotal=subtotal+5000
+        papas=papas+5000
+        n3=n3+1
+    elif tamañoP=="grande":
+        subtotal=subtotal+6000
+        papas=papas+6000
+        n3=n3+1
+    else:
+        print("Tamaño incorrecto")    
+        
+NumHelados=int(input("cuantos helados quiere?"))
+while n4<=NumHelados:
+    tamañoHel=input(f"De que tamaño desea su helado numero {n4} (pequeña, mediana o grande)")
+    if tamañoHel=="pequeña":
+        subtotal=subtotal+6000
+        helados=helados+6000
+        n4=n4+1
+    elif tamañoHel=="mediana":
+        subtotal=subtotal+8000
+        helados=helados+8000
+        n4=n4+1
+    elif tamañoHel=="grande":
+        subtotal=subtotal+10000
+        helados=helados+10000
+        n4=n4+1
+    else:
+        print("Tamaño incorrecto")    
+        
+
+#NumHelados=int(input("cuantos helados quiere?"))
+incservicio=input("Desea incluir el servicio? (si, no)")
+if incservicio=="si":
+    servicio=subtotal*0.1
+else: 
+    servicio=0
+    
+impuestos=subtotal*0.08
+total=subtotal+impuestos+servicio
+#FACTURA
+print("-------- F A C T U R A --------")
+print("Subtotal de Hamburguesas: ", hamburguesas)
+print("Subtotal de Bebidas: ", bebidas)
+print("Subtotal de Papas", papas)
+print("Subtotal de Helados", helados)
+print("Subtotal de Impuestos", impuestos)
+print("Subtotal de Servicio", servicio)
+print("VALOR TOTAL:  ", total) 
